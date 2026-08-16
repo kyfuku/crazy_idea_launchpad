@@ -611,53 +611,85 @@ button {
   }
 
   .topbar {
-    gap: 10px;
-    padding: 14px 12px;
+    min-height: 96px;
+    gap: 7px;
+    padding: 8px 10px;
+  }
+
+  .brand-sub {
+    font-size: 14px;
   }
 
   .ghost-button {
-    min-height: 36px;
-    padding: 7px 10px;
-    font-size: 13px;
+    min-height: 30px;
+    padding: 5px 8px;
+    font-size: 11px;
   }
 
   .board-view {
-    overflow-y: auto;
+    min-height: calc(100svh - 96px);
+    overflow: hidden;
   }
 
   .matrix {
     position: relative;
-    min-height: 820px;
+    min-height: calc(100svh - 96px);
   }
 
   .cell {
-    gap: 38px;
+    gap: 14px;
+    padding: 28px 10px 18px;
+  }
+
+  .hypothesis-pill {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .idea-input,
+  .jump-input {
+    min-height: 32px;
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .save-button {
+    min-height: 32px;
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .axis-center-button {
+    min-width: 54px;
+    min-height: 34px;
+    border-width: 2px;
+    font-size: 12px;
   }
 
   .axis-label {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1;
   }
 
   .axis-top {
-    top: 10px;
-    left: calc(50% + 10px);
+    top: 6px;
+    left: calc(50% + 8px);
   }
 
   .axis-bottom {
-    bottom: 10px;
-    left: calc(50% + 10px);
+    bottom: 6px;
+    left: calc(50% + 8px);
   }
 
   .axis-left {
-    left: 8px;
-    top: calc(50% - 26px);
+    left: 6px;
+    top: calc(50% - 20px);
   }
 
   .axis-right {
-    right: 8px;
-    top: calc(50% - 26px);
+    right: 6px;
+    top: calc(50% - 20px);
   }
 
   .list-header {
@@ -674,5 +706,28 @@ button {
 
   .start-kicker {
     font-size: 15px;
+  }
+
+  .topbar {
+    min-height: 90px;
+    padding: 7px 8px;
+  }
+
+  .board-view,
+  .matrix {
+    min-height: calc(100svh - 90px);
+  }
+
+  .cell {
+    gap: 10px;
+    padding: 24px 8px 16px;
+  }
+
+  .hypothesis-pill {
+    font-size: 12px;
+  }
+
+  .axis-label {
+    font-size: 11px;
   }
 }
