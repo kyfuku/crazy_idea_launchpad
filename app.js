@@ -264,6 +264,7 @@ function bindEvents() {
 function showWorkspace() {
   els.startScreen.classList.add("is-hidden");
   els.workspace.classList.remove("is-hidden");
+  resetScrollPosition();
 }
 
 function showStartScreen() {
@@ -282,6 +283,14 @@ function switchMode(mode) {
   persist();
   if (isBoard) renderBoard();
   if (!isBoard) renderList();
+  if (isBoard) resetScrollPosition();
+}
+
+function resetScrollPosition() {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  window.requestAnimationFrame(() => window.scrollTo(0, 0));
 }
 
 function setAxisControlsEnabled(enabled) {

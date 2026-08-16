@@ -648,7 +648,7 @@ button {
   }
 
   .board-view {
-    height: calc(100dvh - 38px);
+    height: min(calc(100dvh - 38px), 620px);
     min-height: 0;
     overflow: hidden;
   }
@@ -660,8 +660,19 @@ button {
   }
 
   .cell {
-    gap: 5px;
-    padding: 16px 6px 8px;
+    align-content: start;
+    gap: 3px;
+    padding: 10px 6px 6px;
+  }
+
+  .cell[data-cell="0"],
+  .cell[data-cell="1"] {
+    padding-top: 30px;
+  }
+
+  .cell[data-cell="2"],
+  .cell[data-cell="3"] {
+    padding-top: 20px;
   }
 
   .idea-row {
@@ -672,7 +683,7 @@ button {
 
   .hypothesis-pill {
     font-size: 11px;
-    line-height: 1.15;
+    line-height: 1.1;
   }
 
   .idea-input,
@@ -712,7 +723,7 @@ button {
   }
 
   .axis-bottom {
-    bottom: 10px;
+    bottom: 6px;
     left: calc(50% + 6px);
   }
 
@@ -759,13 +770,23 @@ button {
 
   .board-view,
   .matrix {
-    height: calc(100dvh - 34px);
+    height: min(calc(100dvh - 34px), 580px);
     min-height: 0;
   }
 
   .cell {
-    gap: 4px;
-    padding: 14px 5px 7px;
+    gap: 3px;
+    padding: 8px 5px 5px;
+  }
+
+  .cell[data-cell="0"],
+  .cell[data-cell="1"] {
+    padding-top: 24px;
+  }
+
+  .cell[data-cell="2"],
+  .cell[data-cell="3"] {
+    padding-top: 16px;
   }
 
   .hypothesis-pill {
@@ -777,6 +798,6 @@ button {
   }
 
   .axis-bottom {
-    bottom: 8px;
+    bottom: 5px;
   }
 }
