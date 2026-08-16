@@ -147,6 +147,10 @@ function boot() {
 }
 
 function bindEvents() {
+  setMobileBoardHeight();
+  window.addEventListener("resize", setMobileBoardHeight);
+  window.visualViewport?.addEventListener("resize", setMobileBoardHeight);
+
   els.themeForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const rawTheme = els.themeInput.value.trim() || "新しい豆腐の開発";
@@ -159,6 +163,7 @@ function bindEvents() {
     showWorkspace();
     persist();
     render();
+    resetScrollPosition();
   });
 
   els.backButton.addEventListener("click", () => {
@@ -264,6 +269,7 @@ function bindEvents() {
 function showWorkspace() {
   els.startScreen.classList.add("is-hidden");
   els.workspace.classList.remove("is-hidden");
+  setMobileBoardHeight();
   resetScrollPosition();
 }
 
@@ -283,7 +289,10 @@ function switchMode(mode) {
   persist();
   if (isBoard) renderBoard();
   if (!isBoard) renderList();
-  if (isBoard) resetScrollPosition();
+  if (isBoard) {
+    setMobileBoardHeight();
+    resetScrollPosition();
+  }
 }
 
 function resetScrollPosition() {
@@ -291,6 +300,16 @@ function resetScrollPosition() {
   document.documentElement.scrollTop = 0;
   document.body.scrollTop = 0;
   window.requestAnimationFrame(() => window.scrollTo(0, 0));
+  window.setTimeout(() => window.scrollTo(0, 0), 80);
+}
+
+function setMobileBoardHeight() {
+  const viewportHeight = window.visualViewport?.height || window.innerHeight;
+  const topbarHeight = els.workspace.classList.contains("is-hidden")
+    ? 38
+    : Math.ceil(document.querySelector(".topbar")?.getBoundingClientRect().height || 38);
+  const boardHeight = Math.max(420, Math.min(viewportHeight - topbarHeight, 560));
+  document.documentElement.style.setProperty("--mobile-board-height", `${boardHeight}px`);
 }
 
 function setAxisControlsEnabled(enabled) {

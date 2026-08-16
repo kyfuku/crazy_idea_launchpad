@@ -9,6 +9,7 @@
   --line: rgba(255, 255, 255, 0.88);
   --line-soft: rgba(255, 255, 255, 0.4);
   --shadow: 0 24px 80px rgba(0, 103, 50, 0.22);
+  --mobile-board-height: 520px;
 }
 
 * {
@@ -648,7 +649,7 @@ button {
   }
 
   .board-view {
-    height: min(calc(100dvh - 38px), 620px);
+    height: var(--mobile-board-height);
     min-height: 0;
     overflow: hidden;
   }
@@ -661,18 +662,18 @@ button {
 
   .cell {
     align-content: start;
-    gap: 3px;
-    padding: 10px 6px 6px;
+    gap: 2px;
+    padding: 8px 6px 4px;
   }
 
   .cell[data-cell="0"],
   .cell[data-cell="1"] {
-    padding-top: 30px;
+    padding-top: 36px;
   }
 
   .cell[data-cell="2"],
   .cell[data-cell="3"] {
-    padding-top: 20px;
+    padding-top: 12px;
   }
 
   .idea-row {
@@ -718,12 +719,12 @@ button {
   }
 
   .axis-top {
-    top: 4px;
+    top: 12px;
     left: calc(50% + 6px);
   }
 
   .axis-bottom {
-    bottom: 6px;
+    bottom: 2px;
     left: calc(50% + 6px);
   }
 
@@ -770,23 +771,23 @@ button {
 
   .board-view,
   .matrix {
-    height: min(calc(100dvh - 34px), 580px);
+    height: var(--mobile-board-height);
     min-height: 0;
   }
 
   .cell {
     gap: 3px;
-    padding: 8px 5px 5px;
+    padding: 6px 5px 3px;
   }
 
   .cell[data-cell="0"],
   .cell[data-cell="1"] {
-    padding-top: 24px;
+    padding-top: 30px;
   }
 
   .cell[data-cell="2"],
   .cell[data-cell="3"] {
-    padding-top: 16px;
+    padding-top: 10px;
   }
 
   .hypothesis-pill {
@@ -798,6 +799,6 @@ button {
   }
 
   .axis-bottom {
-    bottom: 5px;
+    bottom: 1px;
   }
 }
