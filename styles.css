@@ -611,16 +611,20 @@ button {
   }
 
   .topbar {
-    min-height: 74px;
+    min-height: 38px;
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 5px;
-    padding: 6px 8px;
+    gap: 4px;
+    padding: 5px 6px;
+  }
+
+  .workspace {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .brand {
-    grid-column: 1 / -1;
-    order: -1;
-    min-height: 16px;
+    display: none;
   }
 
   .brand-sub {
@@ -628,13 +632,15 @@ button {
   }
 
   .axis-actions {
-    gap: 5px;
+    gap: 4px;
+    min-width: 0;
+    justify-self: center;
   }
 
   .ghost-button {
-    min-height: 26px;
-    padding: 4px 6px;
-    font-size: 10px;
+    min-height: 24px;
+    padding: 3px 5px;
+    font-size: 9px;
   }
 
   .ghost-button.compact {
@@ -642,7 +648,7 @@ button {
   }
 
   .board-view {
-    height: calc(100svh - 74px);
+    height: calc(100dvh - 38px);
     min-height: 0;
     overflow: hidden;
   }
@@ -654,33 +660,44 @@ button {
   }
 
   .cell {
-    gap: 8px;
-    padding: 22px 8px 12px;
+    gap: 5px;
+    padding: 16px 6px 8px;
+  }
+
+  .idea-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px;
+    width: 100%;
   }
 
   .hypothesis-pill {
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 11px;
+    line-height: 1.15;
   }
 
   .idea-input,
   .jump-input {
-    min-height: 28px;
-    font-size: 12px;
-    padding: 4px 7px;
+    min-height: 24px;
+    border-width: 1px;
+    border-radius: 6px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .save-button {
-    min-height: 28px;
-    font-size: 12px;
-    padding: 4px 7px;
+    width: auto;
+    min-height: 24px;
+    border-width: 1px;
+    border-radius: 6px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .axis-center-button {
-    min-width: 48px;
-    min-height: 30px;
+    min-width: 44px;
+    min-height: 26px;
     border-width: 2px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .axis-label {
@@ -690,28 +707,32 @@ button {
   }
 
   .axis-top {
-    top: 6px;
-    left: calc(50% + 8px);
+    top: 4px;
+    left: calc(50% + 6px);
   }
 
   .axis-bottom {
-    bottom: 24px;
-    left: calc(50% + 8px);
+    bottom: 10px;
+    left: calc(50% + 6px);
   }
 
   .axis-left {
-    left: 6px;
-    top: calc(50% - 20px);
+    left: 5px;
+    top: calc(50% - 14px);
   }
 
   .axis-right {
-    right: 6px;
-    top: calc(50% - 20px);
+    right: 5px;
+    top: calc(50% - 14px);
   }
 
   .list-header {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .list-view {
+    overflow-y: auto;
   }
 }
 
@@ -726,29 +747,29 @@ button {
   }
 
   .topbar {
-    min-height: 68px;
-    padding: 5px 6px;
+    min-height: 34px;
+    padding: 4px 5px;
   }
 
   .ghost-button {
-    min-height: 24px;
-    padding: 3px 5px;
-    font-size: 9px;
+    min-height: 22px;
+    padding: 2px 4px;
+    font-size: 8px;
   }
 
   .board-view,
   .matrix {
-    height: calc(100svh - 68px);
+    height: calc(100dvh - 34px);
     min-height: 0;
   }
 
   .cell {
-    gap: 6px;
-    padding: 20px 7px 10px;
+    gap: 4px;
+    padding: 14px 5px 7px;
   }
 
   .hypothesis-pill {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .axis-label {
@@ -756,6 +777,6 @@ button {
   }
 
   .axis-bottom {
-    bottom: 20px;
+    bottom: 8px;
   }
 }
