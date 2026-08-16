@@ -661,19 +661,9 @@ button {
   }
 
   .cell {
-    align-content: start;
-    gap: 2px;
-    padding: 8px 6px 4px;
-  }
-
-  .cell[data-cell="0"],
-  .cell[data-cell="1"] {
-    padding-top: 36px;
-  }
-
-  .cell[data-cell="2"],
-  .cell[data-cell="3"] {
-    padding-top: 12px;
+    align-content: center;
+    gap: 6px;
+    padding: 16px 6px;
   }
 
   .idea-row {
@@ -719,12 +709,12 @@ button {
   }
 
   .axis-top {
-    top: 12px;
+    top: 8px;
     left: calc(50% + 6px);
   }
 
   .axis-bottom {
-    bottom: 2px;
+    bottom: 8px;
     left: calc(50% + 6px);
   }
 
@@ -776,18 +766,8 @@ button {
   }
 
   .cell {
-    gap: 3px;
-    padding: 6px 5px 3px;
-  }
-
-  .cell[data-cell="0"],
-  .cell[data-cell="1"] {
-    padding-top: 30px;
-  }
-
-  .cell[data-cell="2"],
-  .cell[data-cell="3"] {
-    padding-top: 10px;
+    gap: 5px;
+    padding: 14px 5px;
   }
 
   .hypothesis-pill {
@@ -799,6 +779,6 @@ button {
   }
 
   .axis-bottom {
-    bottom: 1px;
+    bottom: 7px;
   }
 }

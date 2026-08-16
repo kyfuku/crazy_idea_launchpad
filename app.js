@@ -308,7 +308,7 @@ function setMobileBoardHeight() {
   const topbarHeight = els.workspace.classList.contains("is-hidden")
     ? 38
     : Math.ceil(document.querySelector(".topbar")?.getBoundingClientRect().height || 38);
-  const boardHeight = Math.max(420, Math.min(viewportHeight - topbarHeight, 560));
+  const boardHeight = Math.max(380, Math.min(viewportHeight - topbarHeight - 8, 470));
   document.documentElement.style.setProperty("--mobile-board-height", `${boardHeight}px`);
 }
 
