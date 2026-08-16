@@ -635,7 +635,29 @@ button {
   }
 
   .axis-label {
-    display: none;
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .axis-top {
+    top: 10px;
+    left: calc(50% + 10px);
+  }
+
+  .axis-bottom {
+    bottom: 10px;
+    left: calc(50% + 10px);
+  }
+
+  .axis-left {
+    left: 8px;
+    top: calc(50% - 26px);
+  }
+
+  .axis-right {
+    right: 8px;
+    top: calc(50% - 26px);
   }
 
   .list-header {
