@@ -16,4 +16,4 @@
 
 ## GitHub Pages
 
-このリポジトリは `.github/workflows/pages.yml` により、`main` ブランチへ push すると GitHub Pages へ公開されます。
+GitHub Pages の設定で `main` ブランチの `/root` を公開元にすると、この静的サイトを公開できます。
